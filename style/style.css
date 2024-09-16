@@ -1,3 +1,8 @@
+/*=======================================================================*/
+/*      Global       */
+/*=======================================================================*/
+
+
 *{
     margin: 0;
     padding: 0;
@@ -22,21 +27,34 @@ html{
 
 .dbl-mini-container {
     margin: auto;
-    max-height: calc(812px - 90px);
 }
 
-#about-me , #services , #my-work ,#about-me ,#contact, #footer{
-    padding:45px 0px;
+#about-me h6, #services h6,#my-work h6,#contact h6{
+    font-size: 64px;
+    color: #575DFD;
+    text-align: center;
+    padding: 40px 0px 20px;
+    line-height: 100%;
+    letter-spacing: 7%;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: #3d3b49;
+    z-index: 2;
 }
 
-.mini-container #logo{
+/*=======================================================================*/
+/*      Landing Page        */
+/*=======================================================================*/
+
+
+nav .mini-container #logo{
     font-size: 32px;
     text-transform: capitalize;
     color: #575dfd;
     font-weight: 700;
 }
 
-.mini-container #logo span{
+nav .mini-container #logo span{
     color: #ECAC19;
 }
 
@@ -75,8 +93,13 @@ nav .mini-container ul li a{
     color: white;
     font-size: 16px;
     text-transform: capitalize;
+    transition: ease-in-out .4s;
 }
 
+nav .mini-container ul li a:hover{
+    background-color: #b3b6ff;
+    color: #ffffff;
+}
 
 .menu .botton {
     background-color: white;
@@ -88,26 +111,31 @@ nav .mini-container ul li a{
 #landing-page{
     height: 100vh;
     max-height:812px ;
+    position: relative;
     overflow: hidden;
 }
 
-#landing-page .dbl-mini-container {
-    height: calc(100vh - 90px);
-    max-height: calc(812px - 90px);
-    position: relative;
-    margin: auto;
+#landing-page>.mini-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100vh;
+    max-height: 722px;
 }
 
+#landing-page>.mini-container .landing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 
+#landing-page>.mini-container img{
+    height: calc(100vh-90px);
+    max-height: 722px;
+    align-self:end;
+}
 #landing-page nav #togeler{
     display: none;
-}
-
-.landing {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 8px;
 }
 
 .landing p{
@@ -141,40 +169,92 @@ nav .mini-container ul li a{
 
 .landing .icons a i{
     font-size: 48px;
-    color: black;
+    color:  rgb(216, 216, 216);
     transition: ease-in-out .3s;
 }
 
-.landing .icons a i:hover{
-    color: #ECAC19;
+.landing .icons .fa-square-facebook:hover{
+    color: #1877F2;
+}
+.landing .icons .fa-linkedin:hover{
+    color: #0077B5;
+}
+.landing .icons .fa-square-github:hover{
+    color: #000000;
 }
 
-.dbl-mini-container img{
+#landing-page .lines{
+    width: 160px;
     position: absolute;
     bottom: 0px;
-    left: 65%;
-    transform: translateX(-35%);
+    right: 0px;
 }
 
-h6{
-    font-size: 32px;
-    text-align: center;
-    text-transform: capitalize;
-    padding-bottom: 32px;
+#landing-page .lines hr{
+    border-style: dashed;
+    border-top: none;
+    border-right:none ;
+    border-left:none ;
+    border-color:  rgb(247, 247, 247);
+    margin-bottom: 6px;
+    border-radius: 2px;
 }
 
-.dbl-mini-container .detail{
-    text-align: center;
+/*=======================================================================*/
+/*      About Me        */
+/*=======================================================================*/
 
+
+#about-me{
+    width: 100%;
+    position: relative;
+} 
+
+
+#about-me {
+    margin: auto;
+    font-size: 18px;   
 }
 
-.dbl-mini-container .detail p{
-    font-size: 20px;
-    text-align: center;
-    padding: 0px 32px 32px;
+
+#about-me p{
+    display: block;
+    margin: auto; 
+}
+
+#about-me button{
+    color: white;
+    background-color: #575DFD;
+    border: none;
+    padding:14px 30px;
+    border-bottom-right-radius: 30px;
+    margin: 60px;
+}
+
+#about-me div hr{
+    border: none;
+    border-bottom:1px  #000000 dashed;
+    margin-bottom: 12px;
+    height: 0px;
+}
+
+#about-me .land-about {
+    position: absolute;
+    right: 0px;
+    top: -60px;
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+    z-index: 10;
+}
+
+#about-me .detail {
+    background-color: white; 
 }
 
 .dbl-mini-container .detail a{
+    display: block;
+    width: fit-content;
     background-color: #575dfd;
     color: white;
     padding: 12px 18px;
@@ -184,40 +264,92 @@ h6{
     outline: none;
     margin: auto;
     text-transform: capitalize;
+    margin: 32px auto 52px;
 }
+
+
+/*=======================================================================*/
+/*      Services        */
+/*=======================================================================*/
+
 
 #services{
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(247, 247, 247);
 }
-
-
 
 #services .cards {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
     justify-content: space-between;
-    background-color:rgb(220, 220, 220) ;
-}
-
-#services .cards .card{
-    text-align: center;
-    text-transform: capitalize;
+    gap: 12px;
+    padding-bottom: 50px;
 }
 
 #services .cards .card img{
     width: 100%;
+    max-width: 360px;
 }
 
-#my-work .mini-container {
+#services .cards .card{
+    text-align: center;
+}
+
+#services .cards .card h4{
+    margin: 12px auto 8px;
+    text-transform: capitalize;
+    font-size: 20px;
+}
+
+#services .cards .card p{
+    text-transform: capitalize;
+    font-size: 16px;
+}
+
+
+/*=======================================================================*/
+/*      My Mork        */
+/*=======================================================================*/
+
+
+#my-work{
+    position: relative;
+    margin: auto;
+}
+#my-work::before{
+    content: '';
+    position: absolute;
+    background-color: #575DFD;
+    top: 0px;
+    width: 100%;
+    height: 180px;
+    border-top-left-radius: 90px;
+    z-index: -1;
+}
+
+#my-work::after{
+    content: '';
+    position: absolute;
+    background-color:#ECAC19;
+    opacity: 0.8;
+    top: 2px;
+    left: 2px;
+    width:80px;
+    height:80px;
+    border-radius: 40px;
+}
+
+#my-work .my-projects {
+    margin-top: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    justify-items: center;
-    gap: 20px;
-    padding: 20px 0px;
+    grid-template-columns: repeat(3 , 1fr);
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 50px;
 }
 
 #my-work .mini-container img{
-    width: 300px;
+    width: 100%;
+    max-width: 360px;
 }
 
 #my-work ul {
@@ -225,16 +357,28 @@ h6{
     justify-content: center;
     list-style: none;
     margin: 32px auto;
+    margin-bottom: 52px;
+}
+
+#my-work h6{
+    color: #ffffff;
 }
 
 #my-work ul a{
     color: #575dfd;
-    border: 2px #575dfd solid;
+    border: 1px #575dfd solid;
     padding: 12px 18px;
     margin: 0px 8px;
     border-radius: 8px;
     text-decoration: none;
     text-transform: capitalize;
+    font-size: 16px;
+    transition: ease-in-out .4s;
+}
+
+#my-work ul a:hover{
+    background-color: #575dfd;
+    color: #ffffff;
 }
 
 #my-work ul .active{
@@ -244,54 +388,93 @@ h6{
     margin: 0px 8px;
     border-radius: 8px;
     text-decoration: none;
+} 
+
+#my-work .lines hr{
+    border-style: dashed;
+    border-top: none;
+    border-right:none ;
+    border-left:none ;
+    border-color:  rgb(214, 214, 214);
 }
 
-/*   contact   */
+#my-work .lines{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
 
 
-#contact {
-    padding-top: 0px;
+/*=======================================================================*/
+/*      Contact        */
+/*=======================================================================*/
+
+#contact{
+    background-color: rgb(247, 247, 247);
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 #contact .dbl-mini-container{
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    overflow: visible;
+    justify-content: space-between;
+}
+
+#contact .dbl-mini-container h6{
+    text-align: center;
+    width: 50%;
+    position: relative;
+    color: #575DFD;
+    padding: 0px;
+
+}
+
+#contact .dbl-mini-container h6::after{
+    content: '';
+    position: absolute;
+    background-color:#ffffff;
+    width:340px;
+    height:340px;
+    border-radius: 170px;
+    top: 50%;
+    left:-50px;
+    transform: translateY(-50%);
+    z-index: -1;
 }
 
 #contact .dbl-mini-container form{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
 }
 
-#contact .dbl-mini-container form input{
-    height: 40px;
-    outline: none;
+#contact .dbl-mini-container form input ,textarea{
+    padding: 12px 18px;
+    width: 100%;
     border: none;
-    border: 1px #b0b0b0 solid;
+    outline: none;
     border-radius: 4px;
-    padding-left: 12px;
-    color: rgb(36, 36, 36);
+    text-transform: capitalize;
+    font-size: 16px;
+    resize: none;
 }
 
-#contact .dbl-mini-container form textarea{
-    outline: none;
-    border: none;
-    border: 1px #b0b0b0 solid;
-    border-radius:4px;
-    padding-left: 12px;
-    resize: none;
-    color: rgb(36, 36, 36);
-}
 
 #contact .dbl-mini-container form input[type = submit]{
     width: fit-content;
-    padding:0px 20px;
+    padding:12px 18px;
     background-color: #575dfd;
     color: white;
     border: none;
-    transition: ease-in-out .3s;
+    transition: ease-in-out .4s;
+    font-size: 16px;
+    
 }
 
 #contact .dbl-mini-container form input:placeholder-shown{
@@ -303,11 +486,13 @@ h6{
 }
 
 #contact .dbl-mini-container form input[type = submit]:hover{
-    background-color: #02067a;
+    background-color: #030895;
 }
 
 
-/*   FOOTER   */
+/*=======================================================================*/
+/*   Footer   */
+/*=======================================================================*/
 
 
 #footer{
@@ -339,19 +524,27 @@ h6{
 }
 
 #footer .icons a i{
-    font-size: 28px;
-    color: black;
+    font-size: 32px;
+    color:  rgb(216, 216, 216);
     transition: ease-in-out .3s;
 }
 
-#footer .icons a i:hover{
-    color: #ECAC19;
+#footer .icons .fa-square-facebook:hover{
+    color: #1877F2;
+}
+#footer .icons .fa-linkedin:hover{
+    color: #0077B5;
+}
+#footer .icons .fa-square-github:hover{
+    color: #000000;
 }
 
+/*=======================================================================*/
+/*   Media Query  */
+/*=======================================================================*/
 
 
-/*   media query  */
-
+/*   Min Width = 1401px  */
 @media (min-width:1401px) {
    
     .container{
@@ -363,11 +556,18 @@ h6{
     }
 
     .dbl-mini-container{
-        width:1070px ;
+        width:640px ;
+    }
+
+    section{
+        margin: auto;
+        max-width:1720px ;
     }
     
 }
 
+
+/*   Max Width = 1400px  */
 @media (max-width:1400px) {
 
     .mini-container{
@@ -383,6 +583,8 @@ h6{
     }
 }
 
+
+/*   Max Width = 1200px  */
 @media (max-width:1200px) {
     .container{
         width: 970px;
@@ -395,6 +597,8 @@ h6{
     }
 }
 
+
+/*   Max Width = 991px  */
 @media (max-width:991px) {
     .container{
         width: 750px; 
@@ -407,13 +611,29 @@ h6{
     .mini-container{
         width: 720px;
     }
+
+    #about-me h6 ,#services h6, #my-work h6, #contact h6 {
+        font-size: 54px;
+    }
     
+    #landing-page>.mini-container {
+        justify-content: space-between;
+    }
+
+    #services .cards {
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        justify-content: space-between;
+        gap: 12px;
+        padding-bottom: 50px;
+    }
+
     nav .mini-container .menu{
         display:none;
     }
 
-    #my-work .mini-container {
-        grid-template-columns: 1fr 1fr;
+    #my-work .my-projects {
+            grid-template-columns: repeat(2 , 1fr);
     }
 
     #landing-page nav ul{
@@ -479,7 +699,7 @@ h6{
         position: absolute;
         width: 80Vw;
         background-color: #575dfd;
-        top: 90px;
+        top: 80px;
         left: 50%;
         transform: translateX(-50%);
         z-index: 100;
@@ -488,10 +708,10 @@ h6{
 
     #togeler:checked ~ .menu li{
         width: 100%;
-        height: 90px;
+        height: 80px;
         border-bottom:1px solid #e3e3e3;
         margin: auto;
-        line-height: 90px;
+        line-height: 70px;
         transition: ease-in-out 1s;
     }
 
@@ -512,10 +732,49 @@ h6{
     
 }
 
+
+/*   Max Width = 768px  */
 @media (max-width:768px) {
+
     .container{
         width: 100%;
     }  
+
+    .mini-container{
+        padding: auto 8px;
+    }
+
+    #about-me h6 ,#services h6, #my-work h6, #contact h6 {
+        font-size: 42px;
+    }
+
+    #landing-page>.mini-container {
+        justify-content: space-evenly;
+    }
+
+    #services .cards {
+        grid-template-columns: repeat(1 , 1fr);
+        justify-content: space-evenly;
+    }
+
+    #my-work .my-projects {
+        grid-template-columns: repeat(1 , 1fr);
+        width: fit-content;
+        align-items: center;
+    }
+
+    #landing-page .landing p{
+        font-size: 24px;
+    }
+
+    #landing-page .landing h4{
+        font-size: 32px;
+        padding: 8px auto;
+    }
+
+    #landing-page .lines{
+        width: 80px;
+    }
 
     #footer{
         flex-direction:column-reverse;
@@ -533,8 +792,8 @@ h6{
     }
 
     #my-work .mini-container {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        grid-template-columns: repeat(1 , 1fr);
+        justify-content: space-evenly;
     }
 
     .dbl-mini-container,
@@ -542,20 +801,22 @@ h6{
         width: 100%;
     }
 
-    .landing {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-
-    .dbl-mini-container img{
+    #landing-page .mini-container img{
         display: none;
     }
+
     #contact .dbl-mini-container{
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
     }
 
-    
+    #contact .dbl-mini-container h6::after {
+        display: none;
+    }
+
+    #contact .dbl-mini-container h6{
+        margin-bottom: 40px;
+    }
+   
 }
