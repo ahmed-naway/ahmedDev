@@ -205,28 +205,40 @@ nav .mini-container ul li .botton:hover{
 /*=======================================================================*/
 
 
-#about-me{
-    width: 100%;
-    position: relative;
-} 
-
-
 #about-me {
-    margin: auto;
-    font-size: 18px;   
+       margin: auto;
+       padding-bottom: 60px;
+       
 }
 
 
 #about-me p{
     display: block;
     margin: auto; 
+    font-size: 18px;
+    padding-bottom: 30px;
+    text-transform: capitalize;
 }
 
-#about-me a{
+#about-me .dbl-mini-container .about-me a{
+    display: block;
     transition: ease-in-out .4s;
+    text-decoration: none;
+    padding: 12px 18px;
+    background-color:#575dfd;
+    border-radius: 8px;
+    color: #ffffff;
+    width: fit-content;
+    margin: auto;
+    text-transform: capitalize;
 }
 
-#about-me a:hover{
+#about-me .dbl-mini-container .about-me a span{
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#about-me .dbl-mini-container .about-me a:hover{
     background-color: #030895;
 }
 
