@@ -746,7 +746,10 @@ nav .mini-container ul li .botton:hover{
     #about-me h6 ,#services h6, #my-work h6, #contact h6 {
         font-size: 42px;
     }
-
+    #about-me .about-me{
+        width: 93%;
+        margin: auto;
+    }
     #landing-page>.mini-container {
         justify-content: space-evenly;
     }
