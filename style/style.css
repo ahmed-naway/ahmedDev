@@ -72,7 +72,7 @@ nav .mini-container::after{
     max-height: 812px;
     width: 55vw;
     top: 0;
-    left: 45%;
+    left: 50%;
     background-color: #575dfd;
     z-index: -1;
 }
@@ -96,7 +96,7 @@ nav .mini-container ul li a{
     transition: ease-in-out .4s;
 }
 
-nav .mini-container ul li a:last-of-type:hover{
+nav .mini-container ul li .botton:hover{
     background-color: #b3b6ff;
     color: #ffffff;
 }
@@ -222,13 +222,12 @@ nav .mini-container ul li a:last-of-type:hover{
     margin: auto; 
 }
 
-#about-me button{
-    color: white;
-    background-color: #575DFD;
-    border: none;
-    padding:14px 30px;
-    border-bottom-right-radius: 30px;
-    margin: 60px;
+#about-me a{
+    transition: ease-in-out .4s;
+}
+
+#about-me a:hover{
+    background-color: #030895;
 }
 
 #about-me div hr{
