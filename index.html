@@ -144,11 +144,11 @@
     <section id="contact">
         <div class="dbl-mini-container">
          <h6>let's talk</h6>
-         <form action="#">
-
-             <input type="text" placeholder="name">
-             <input type="text" placeholder="email">
-             <textarea name="your message" id="" cols="30" rows="4" placeholder="your message"></textarea>
+         <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="c3a3c86c-8175-49b2-9044-ec9b5945ce0c">
+             <input type="text" name="name" placeholder="name" required>
+             <input type="email" name="email" placeholder="email" required>
+             <textarea name="your message" id="" cols="30" rows="4" placeholder="your message" required></textarea>
              <input type="submit" value="send">
 
          </form>

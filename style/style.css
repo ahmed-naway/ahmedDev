@@ -96,7 +96,7 @@ nav .mini-container ul li a{
     transition: ease-in-out .4s;
 }
 
-nav .mini-container ul li a:hover{
+nav .mini-container ul li a:last-of-type:hover{
     background-color: #b3b6ff;
     color: #ffffff;
 }
