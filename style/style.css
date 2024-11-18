@@ -838,6 +838,18 @@ nav .mini-container ul li .botton:hover{
         opacity: 0;
         z-index: -1;
     }
+
+    .card__article:hover {
+        animation: none;
+    }
+      
+    .card__article:not(:hover) {
+        animation: none;
+    }
+      
+    .card__article:not(:hover) .card__data {
+        animation: none;
+    }
     
 }
 
