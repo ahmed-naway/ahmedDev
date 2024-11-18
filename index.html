@@ -8,20 +8,21 @@
 </head>
 <body>
 
+
     <!--  Landing-Page Section   -->
 
-    <section id="landing-page">
 
+    <section id="landing-page">
+        <!--  nav menu Section   -->
         <nav>
             <div class="mini-container">
                 <div id="logo">
-                    <p><span>n</span>away.</p>
+                    <img src="./assits/logo.png" alt="">
                 </div>
 
-                <input type="checkbox" id="togeler">
-                <label for="togeler" class="menu-bar-container">
-                    <div class="bar"></div>
-                </label>
+                <div class="menu-btn">
+                    <div></div>
+                 </div>
                 
                 <ul class="menu">
                     <li><a href="#about-me">about me</a></li>
@@ -30,6 +31,7 @@
                     <li><a href="#contact">contact me</a></li>
                     <li ><a href="https://wa.me/79970101" target="_blank" class="botton">hire me</a></li>
                 </ul>
+
             </div>
         </nav>
 
@@ -46,9 +48,9 @@
                     </p>
 
                     <div class="icons">
-                        <a href=""><i class="fa-brands fa-square-github"></i></a>
-                        <a href=""><i class="fa-brands fa-linkedin"></i></a>
-                        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://github.com/ahmed-naway" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+                        <a href="linkedin.com/in/ahmed-naway" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.facebook.com/ahmednaway35/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a>
                     </div>
             </div>
             <img src="./assits/It_s_Man_Crush_Monday__and_Philly_Model_Zaire_Is_Our_Gift_To_You__You_re_Welcome___Essence-removebg-preview.png" alt="">
@@ -62,27 +64,28 @@
             <hr>
             <hr>
         </div>
+
     </section>
 
+
 <!--  About-Me Section   -->
+
 
     <section id="about-me">
 
         <div class="dbl-mini-container">
             <div class="about-me">
                 <h6>about me</h6>
-                <p>A passion for solving tech issues, designing
-                intuitive user interfaces, and developing 
-                responsive websites. I aim to create seamless,
-                user-friendly digital experiences that engage
-                and delight users.</p>
-            <a href="./assits/Ahmed-EN CV.pdf" download="Ahmed-Abdelssid-Naway.pdf" >download my <span>cv</span></a>
+                <p>I am a <span>Front-End Developer</span> passionate about creating responsive, pixel-perfect websites using HTML, CSS, and JavaScript. I specialize in intuitive interfaces that ensure seamless interactions and high performance across devices. Additionally, as a skilled <span>Technical Support Engineer</span>, I’m experienced in troubleshooting hardware and software, with expertise in Windows Server, Active Directory, and network administration.</p>
+                <a href="./assits/Ahmed-EN CV.pdf" download="Ahmed-Abdelssid-Naway.pdf" >download my <span>cv</span></a>
             </div>
         </div>
 
     </section>
 
+
 <!--  Services Section   --> 
+
 
     <section id="services">
 
@@ -91,17 +94,18 @@
          <div class="cards">
 
              <div class="card web">
-                 <img src="./assits/ui.jpg" alt="web">
+                <i class="fa-solid fa-code"></i>
+                
                  <h4>web dev</h4>
                  <p>html, css, js, dart and cms</p>
              </div>
              <div class="card mobile">
-                 <img src="./assits/ui.jpg" alt="mobile">
+                <i class="fa-solid fa-mobile-screen"></i>
                  <h4>mobile dev</h4>
                  <p>java, dart, react and opj C</p>
              </div>
              <div class="card user">
-                 <img src="./assits/ui.jpg" alt="ui">
+                <i class="fa-solid fa-paintbrush"></i>
                  <h4>ui & ux design</h4>
                  <p>adobe xd , figma and sketch</p>
              </div>
@@ -109,39 +113,75 @@
          </div>
         </div>
 
-     </section>
-
+    </section>
 
 
 <!--  My-Work Section   --> 
 
-     <section id="my-work">
-         <h6>my work</h6>
+    <section id="my-work">
 
-         <div class="mini-container my-projects">
-            <a href="https://ahmed-naway.github.io/homez/" target="_blank"><img src="./assits/Screenshot (4).png" alt="homez"></a>
-            <a href="https://ahmed-naway.github.io/kasper-Template/" target="_blank"><img src="./assits/Screenshot (5).png" alt="kasper"></a>
-          <!--  <a href="https://ahmed-naway.github.io/Forms/" target="_blank"><img src="./assits/Screenshot (3).png" alt="Forms"></a>-->
-            <a href="https://ahmed-naway.github.io/Leon-Template/" target="_blank"><img src="./assits/Screenshot (1).png" alt="Leon"></a>
-          <!--  <a href="https://ahmed-naway.github.io/Picture-With-Frame/" target="_blank"><img src="./assits/Screenshot (2).png" alt="Frame"></a> -->
-           <!-- <a href="https://ahmed-naway.github.io/Vegan/" target="_blank"><img src="./assits/Screenshot (6).png" alt="Vegan"></a> -->
-         </div>
-         <ul>
-            <li class="button"><a class="active" href="#">all</a></li>
-            <li class="button"><a href="#">websites</a></li>
-            <li class="button"><a href="#">Designs</a></li>
-         </ul>
+        <h6>my work</h6>
+
+        <div class="container">
+            <div class="card__container mini-container">
+
+                <article class="card__article">
+                    <img src="./assits/Screenshot (5).png" alt="image" class="card__img">
+     
+                    <div class="card__data">
+                        <h2 class="card__title">kasper-Template</h2>
+                       <span class="card__description">ahmed-naway.github.io/kasper</span>
+                       
+                       <a href="https://ahmed-naway.github.io/kasper-Template/" class="card__button">explore</a>
+                    </div>
+                 </article>
+     
+                 <article class="card__article">
+                    <img src="./assits/Screenshot (4).png" alt="image" class="card__img">
+     
+                    <div class="card__data">
+                        <h2 class="card__title">homez</h2>
+                       <span class="card__description">ahmed-naway.github.io/homez</span>
+                       
+                       <a href="https://ahmed-naway.github.io/homez/" class="card__button">explore</a>
+                    </div>
+                 </article>
+               <article class="card__article">
+                  <img src="./assits/Screenshot (1).png" alt="image" class="card__img">
+   
+                  <div class="card__data">
+                    <h2 class="card__title">Leon-Template</h2>
+                     <span class="card__description">ahmed-naway.github.io/Leon</span>
+                     
+                     <a href="https://ahmed-naway.github.io/Leon-Template/" class="card__button">explore</a>
+                  </div>
+               </article>
+   
+               
+            </div>
+        </div>
+
+        <ul id="filter">
+                <li class="button"><a class="active" href="#">all</a></li>
+                <li class="button"><a href="#">websites</a></li>
+                <li class="button"><a href="#">Designs</a></li>
+        </ul>
+        
          <div class="lines">
             <hr>
             <hr>
             <hr>
             <hr>
         </div>
-     </section>
 
+    </section>
+
+
+    <!--  contact section   --> 
 
 
     <section id="contact">
+
         <div class="dbl-mini-container">
          <h6>let's talk</h6>
          <form action="https://api.web3forms.com/submit" method="POST">
@@ -153,20 +193,20 @@
 
          </form>
         </div>
+
      </section>
  
 
-<!--  footer section   --> 
+    <!--  footer section   --> 
 
      <section id="footer" class="mini-container">
          
          <p>©2023 naway. All Rights Reserved</p>
 
          <div class="icons">
-            <a href=""><i class="fa-brands fa-square-github"></i></a>
-            <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-        </div>
+            <a href="https://github.com/ahmed-naway" target="_blank"><i class="fa-brands fa-square-github"></i></a>
+            <a href="linkedin.com/in/ahmed-naway" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.facebook.com/ahmednaway35/" target="_blank"><i class="fa-brands fa-square-facebook"></i></a></div>
      </section>
 
     <script src="./js/main.js"></script>
