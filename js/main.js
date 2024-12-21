@@ -1,14 +1,20 @@
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
-const filter = document.querySelectorAll("#filter li");
+const filter = document.querySelectorAll(".filter li");
+const contain = document.querySelectorAll(".filters-content .card__article");
 
-const addRemoveClass = (className) => {
-  if (menuBtn.classList.contains(className)) {
-    menuBtn.classList.remove(className);
+const addRemoveClass = (name, className) => {
+  if (name.classList.contains(className)) {
+    name.classList.remove(className);
   } else {
-    menuBtn.classList.add(className);
+    name.classList.add(className);
   }
 };
+
+menuBtn.addEventListener("click", () => {
+  addRemoveClass(menuBtn, "close");
+  addRemoveClass(menu, "active");
+});
 
 filter.forEach((gif) => {
   gif.addEventListener("click", function (e) {
@@ -24,9 +30,28 @@ filter.forEach((gif) => {
 
     if (gif.classList != "active") {
       gif.classList.add("active");
+
+      if (gif.classList.contains("disign")) {
+        contain.forEach((card) => {
+          if (card.classList.contains("disign")) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      } else if (gif.classList.contains("web")) {
+        contain.forEach((card) => {
+          if (card.classList.contains("web")) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      } else {
+        contain.forEach((card) => {
+          card.style.display = "block";
+        });
+      }
     }
   });
 });
-
-menuBtn.addEventListener("click", () => addRemoveClass("close"));
-menuBtn.addEventListener("click", () => addRemoveClass("active"));
