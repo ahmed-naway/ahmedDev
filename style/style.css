@@ -408,7 +408,7 @@ nav .mini-container ul li .botton:hover {
 .card__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-size);
+  gap: calc(6 * var(--gap-size)) var(--gap-size);
   /* margin: 0px auto 70px; */
 }
 
@@ -564,6 +564,11 @@ nav .mini-container ul li .botton:hover {
 #my-work .filter li {
   margin: 0px 6px;
   text-transform: capitalize;
+}
+
+#my-work .filter li a {
+  text-decoration: none;
+  color: inherit;
 }
 
 #my-work .filter .btn-list {
